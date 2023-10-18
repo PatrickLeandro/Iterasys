@@ -12,3 +12,4 @@ C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora\obj\Debug\net8.0\refin
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora\obj\Debug\net8.0\calculadora.pdb
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora\obj\Debug\net8.0\calculadora.genruntimeconfig.cache
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora\obj\Debug\net8.0\ref\calculadora.dll
+C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora\obj\Debug\net8.0\calculadora.sourcelink.json

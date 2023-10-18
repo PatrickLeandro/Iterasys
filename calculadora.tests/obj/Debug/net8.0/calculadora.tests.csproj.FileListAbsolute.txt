@@ -103,3 +103,4 @@ C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora.tests\obj\Debug\net8.0
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora.tests\obj\Debug\net8.0\calculadora.tests.pdb
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora.tests\obj\Debug\net8.0\calculadora.tests.genruntimeconfig.cache
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora.tests\obj\Debug\net8.0\ref\calculadora.tests.dll
+C:\Users\Usuario\Documents\QA-Trilha\Iterasys\calculadora.tests\obj\Debug\net8.0\calculadora.tests.sourcelink.json

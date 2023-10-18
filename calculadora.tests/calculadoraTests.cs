@@ -1,4 +1,4 @@
-using NUnit.Framework; // Usamos o NUnit para escrever testes unitários.
+/* using NUnit.Framework; // Usamos o NUnit para escrever testes unitários.
 using Calc; // Importamos o namespace da classe que queremos testar.
 
 namespace Calc.Tests
@@ -51,3 +51,73 @@ namespace Calc.Tests
         }
     }
 }
+ */
+
+ using NUnit.Framework; // Usamos o NUnit para escrever testes unitários.
+using Calc; // Importamos o namespace da classe que queremos testar.
+
+namespace Calc.Tests
+{
+    [TestFixture] // Indicamos que esta classe contém testes.
+    public class CalculadoraTests
+    {
+        [Test]
+        public void TestSomarDoisNumeros_PositiveNumbers()
+        {
+            // Teste com números positivos.
+            int resultado = Calculadora.somarDoisNumeros(5, 7);
+            
+            // Usamos a asserção Assert.AreEqual para verificar se o resultado é igual ao valor esperado.
+            // No caso, esperamos que a soma de 5 e 7 seja igual a 12.
+            Assert.AreEqual(12, resultado);
+        }
+
+        [Test]
+        public void TestSomarDoisNumeros_NegativeNumbers()
+        {
+            // Teste com números negativos.
+            int resultado = Calculadora.somarDoisNumeros(-5, -7);
+            
+            // Usamos a asserção Assert.AreEqual para verificar se o resultado é igual ao valor esperado.
+            // No caso, esperamos que a soma de -5 e -7 seja igual a -12.
+            Assert.AreEqual(-12, resultado);
+        }
+
+        [Test]
+        public void TestSomarDoisNumeros_PositiveAndNegativeNumbers()
+        {
+            // Teste com um número positivo e outro negativo.
+            int resultado = Calculadora.somarDoisNumeros(5, -7);
+            
+            // Usamos a asserção Assert.AreEqual para verificar se o resultado é igual ao valor esperado.
+            // No caso, esperamos que a soma de 5 e -7 seja igual a -2.
+            Assert.AreEqual(-2, resultado);
+        }
+
+        [Test]
+        public void TestSomarDoisNumeros_SameNumbers()
+        {
+            // Teste com dois números iguais.
+            int resultado = Calculadora.somarDoisNumeros(10, 10);
+            
+            // Usamos a asserção Assert.AreEqual para verificar se o resultado é igual ao valor esperado.
+            // No caso, esperamos que a soma de 10 e 10 seja igual a 20.
+            Assert.AreEqual(20, resultado);
+        }
+
+        [Test]
+        public void TestSomarDoisNumeros_Zero()
+        {
+            // Teste com zero.
+            int resultado = Calculadora.somarDoisNumeros(0, 0);
+            
+            // Usamos a asserção Assert.AreEqual para verificar se o resultado é igual ao valor esperado.
+            // No caso, esperamos que a soma de 0 e 0 seja igual a 0.
+            Assert.AreEqual(0, resultado);
+        }
+    }
+}
+
+
+
+
