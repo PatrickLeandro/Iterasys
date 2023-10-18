@@ -1,0 +1,144 @@
+
+Caso de Teste
+
+identificador: CT0001 - Cadastro de um novo cliente (sem conta google)
+
+Pré condições: Navegador atualizado, acesso a internet, novo usuário
+
+Passos:  
+
+1- Acessar o site  https://www.giulianaflores.com.br
+2- No menu superior, clicar em Perfil 
+3- Selecionar a opção Login / Cadastrar
+4- Selecionar a opção Criar cadastro
+5- Preencher os campos com dados validos
+6- Selecionar Finalizar cadastro
+
+
+Resultado Esperado:
+
+Carrega uma nova página e exibe o do nome do usuário ao selecionar a opção perfir no canto superior esquerdo.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Critério de Aceitação - Sintaxe Gherkin
+
+Identificador: CT0002
+
+Funcionalidade: Cadastro de um novo cliente (sem conta google) 
+
+
+Cenário: Cadastro de um novo com sucesso
+
+
+Dado que acesso o site https://www.giulianaflores.com.br
+Quando clico em Perfil
+E Seleciono Login / Cadastrar
+E Seleciono Criar Cadastro 
+E Preencho todos os campos com dados validos
+E seleciono Finalizar cadastro
+Então carrega uma nova página e exibe o do nome do usuário ao selecionar a opção perfir no canto superior esquerdo.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+    Caso de Teste
+
+identificador: CT0003 - Recuperar a senha 
+
+Pré condições: Navegador atualizado, acesso a internet, usuário previamente cadastrado que não se lembra da senha
+
+Passos:  
+
+1- Acessar o site  https://www.giulianaflores.com.br
+2- No menu superior, clicar em Perfil 
+3- Selecionar a opção Login / Cadastrar
+4- Selecionar a opção Esqueci minha senha
+5- Preencher o campo com e-mail ou CPF validos
+6- Selecionar Continuar
+7- Verificar em seu e-mail se chegoue-mail para que você crie uma nova senha. 
+
+
+Resultado Esperado:
+
+Carrega uma nova página e exibe o texto : ATENÇÃO - E-mail enviado!
+    Caso exista uma conta com o e-mail/CPF  cadastrado, enviaremos um e-mail para que você crie uma nova senha. Caso não receba o e-mail em alguns minutos, verifique a sua caixa de spam ou tente novamente.
+Chega um e-mail com um link para o cadastro de uma nova senha.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+    Critério de Aceitação - Sintaxe Gherkin
+
+    Identificador: CT0004
+    
+    Funcionalidade: Recuperar a senha 
+    
+    Cenário: Usuário previamente cadastrado que não se lembra da senha 
+
+    Dado que acesso o site https://www.giulianaflores.com.br
+    Quando clico em Perfil
+    E Seleciono Login / Cadastrar
+    E seleciono Esqueci minha senha
+    E Prencho o campo com dados validos
+    E seleciono Continuar
+    Então carrega uma nova página e exibe o texto : "ATENÇÃO - E-mail enviado! Caso exista uma conta com o e-mail/CPF  cadastrado, enviaremos um e-mail para que você crie uma nova senha. Caso não receba o e-mail em alguns minutos, verifique a sua caixa de spam ou tente novamente."
+    E Recebo e-mail da plataforma com link para redefinição de senha
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+    Caso de Teste
+
+    identificador: CT0005 - Carrinho de compras
+    
+    Pré condições: Navegador atualizado, acesso a internet, usuário previamente cadastrado logado
+    
+    Passos:  
+
+    1- Acessar o site  https://www.giulianaflores.com.br
+    2- Na barra de pesquisa insira "Rosas Colombianas" e selecione a lupa
+    3- Selecione um produto da loja
+    4- Selecione ADICIONAR AO CARRINHO
+    5- Selecione uma data e horario 
+    6- Selecione OK ->
+    7- Selecione ADICIONAR AO CARRINHO
+
+
+    Resultado Esperado:
+
+    Carrega a página carrinho de compras  mostrando o que tem no carrinho e o frete.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+    Critério de Aceitação - Sintaxe Gherkin
+
+    Identificador: CT0006
+
+    Funcionalidade: Carrinho de compras
+
+
+    Cenário: Carrinho de compras a partir de usuário logado
+
+    Dado que acesso o site https://www.giulianaflores.com.br
+    E Pesquiso na barra de pesquisa "Rosas Colombianas"
+    E seleciono um produto
+    E seleciono ADICIONAR AO CARRINHO
+    E seleciono uma data e horario
+    E seleciono OK ->
+    E seleciono ADICIONAR AO CARRINHO
+    Então carrega a página carrinho de compras  mostrando o que tem no carrinho e o frete.
+
+
+
+
+
