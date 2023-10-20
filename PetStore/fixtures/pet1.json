@@ -1,0 +1,18 @@
+{
+    "id": 4303300,
+    "category": {
+      "id": 1,
+      "name": "motoboy"
+    },
+    "name": "Trick",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "Rapido"
+      }
+    ],
+    "status": "available"
+  }
