@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using System.Xml;
 using RestSharp;
 using NUnit.Framework;
 using Newtonsoft.Json; // Newtonsoft.Json importado para usar JsonConvert.
@@ -81,6 +83,7 @@ namespace Pet
             Assert.That((int)response.StatusCode, Is.EqualTo(200));
             Assert.That((int)responseBody.id, Is.EqualTo(petId));
             Assert.That(responseBody.name.ToString(), Is.EqualTo(petName));
+            
 
             // Agora você pode realizar mais verificações com base nas informações do animal de estimação retornado.
             // Por exemplo, você pode verificar o ID, o nome, o status, etc.
@@ -96,8 +99,26 @@ namespace Pet
             petModel.category = new Category(1, "PatrickLeo");
             petModel.name = "LeandrinhoPTK";
             petModel.photoUrls = new String[]{""};
-            petModel.tags = new Tag[]{new Tag(1, "vacinadão")};
+            petModel.tags = new Tag[]{new Tag(1, "vacinadão"), 
+                                      new Tag(2, "castradão")};
+            petModel.status = "available";
+
+
+            String jsonBody = JsonConvert.SerializeObject(petModel, Formatting.Indented);
+            Console.WriteLine(jsonBody);
             
+            var client = new RestClient(BASE_URL);
+
+            var request = new RestRequest("pet", Method.Put);
+            request.AddBody(jsonBody);
+
+            var response = client.Execute(request);
+
+            var responseBody = JsonConvert.DeserializeObject<dynamic>(response.Content);
+            Console.WriteLine(responseBody);
+
+
+            Assert.That((int)response.StatusCode, Is)
         }
     }
 }
