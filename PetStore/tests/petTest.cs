@@ -85,11 +85,19 @@ namespace Pet
             // Agora você pode realizar mais verificações com base nas informações do animal de estimação retornado.
             // Por exemplo, você pode verificar o ID, o nome, o status, etc.
         }
-
         
+   
 
-      
-
-        
+        [Test, Order(3)]
+        public void PutPetTest()
+        {
+            PetModel petModel = new PetModel();
+            petModel.id = 33174;
+            petModel.category = new Category(1, "PatrickLeo");
+            petModel.name = "LeandrinhoPTK";
+            petModel.photoUrls = new String[]{""};
+            petModel.tags = new Tag[]{new Tag(1, "vacinadão")};
+            
+        }
     }
 }
