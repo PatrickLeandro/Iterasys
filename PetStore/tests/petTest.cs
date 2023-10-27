@@ -61,7 +61,7 @@ namespace Pet
 
         }
 
-            
+
         [Test, Order(2)]
         public void GetPetTest()
         {
@@ -88,43 +88,50 @@ namespace Pet
             Assert.That((int)response.StatusCode, Is.EqualTo(200));
             Assert.That((int)responseBody.id, Is.EqualTo(petId));
             Assert.That(responseBody.name.ToString(), Is.EqualTo(petName));
-            
+
 
             // Agora você pode realizar mais verificações com base nas informações do animal de estimação retornado.
             // Por exemplo, você pode verificar o ID, o nome, o status, etc.
         }
-        
-   
+
+
 
         [Test, Order(3)]
         public void PutPetTest()
         {
+            // Cria uma instância de PetModel
             PetModel petModel = new PetModel();
             petModel.id = 4303300;
             petModel.category = new Category(1, "PatrickLeo");
             petModel.name = "LeandrinhoPTK";
-            petModel.photoUrls = new String[]{""};
-            petModel.tags = new Tag[]{new Tag(1, "vacinadão"), 
-                                      new Tag(2, "castradão")};
+            petModel.photoUrls = new String[] { "" };
+            petModel.tags = new Tag[]{new Tag(1, "vacinadão"),
+                              new Tag(2, "castradão")};
             petModel.status = "available";
 
-
-            String jsonBody = JsonConvert.SerializeObject(petModel, Formatting.Indented);
+            // Serializa o objeto PetModel em uma representação JSON
+            String jsonBody = JsonConvert.SerializeObject(petModel, Formatting.Indented); 
             Console.WriteLine(jsonBody);
-            
+
+            // Cria um cliente REST
             var client = new RestClient(BASE_URL);
 
+            // Cria uma solicitação HTTP do tipo PUT para a rota "pet"
             var request = new RestRequest("pet", Method.Put);
+            // Adiciona o corpo da solicitação, que contém o JSON serializado
             request.AddBody(jsonBody);
 
+            // Envia a solicitação ao servidor
             var response = client.Execute(request);
 
+            // Desserializa a resposta JSON em um objeto dinâmico
             var responseBody = JsonConvert.DeserializeObject<dynamic>(response.Content);
             Console.WriteLine(responseBody);
 
-
+            // Verifica se o código de status da resposta é igual a 200 (sucesso)
             Assert.That((int)response.StatusCode, Is.EqualTo(200));
         }
+
         [Test, Order(4)]
         public void GetPetTest2()
         {
@@ -150,12 +157,12 @@ namespace Pet
             // Verifica se o código de status da resposta é igual a 200.
             Assert.That((int)response.StatusCode, Is.EqualTo(200));
             Assert.That((int)responseBody.id, Is.EqualTo(petId));
-            Assert.That(responseBody.name.ToString(), Is.EqualTo(petName));
-            
+            Assert.That(responseBody.name.ToString(), Is.EqualTo(petName)); 
+
 
             // Agora você pode realizar mais verificações com base nas informações do animal de estimação retornado.
             // Por exemplo, você pode verificar o ID, o nome, o status, etc.
         }
-        
+
     }
 }
