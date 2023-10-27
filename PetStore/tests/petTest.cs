@@ -1,9 +1,14 @@
+using System.IO.IsolatedStorage;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using RestSharp;
 using NUnit.Framework;
 using Newtonsoft.Json; // Newtonsoft.Json importado para usar JsonConvert.
 using System.IO; // Certifique-se de ter System.IO importado para usar File.
+using Models;
+using Formatting = Newtonsoft.Json.Formatting;
+
 
 
 
@@ -95,7 +100,7 @@ namespace Pet
         public void PutPetTest()
         {
             PetModel petModel = new PetModel();
-            petModel.id = 33174;
+            petModel.id = 4303300;
             petModel.category = new Category(1, "PatrickLeo");
             petModel.name = "LeandrinhoPTK";
             petModel.photoUrls = new String[]{""};
@@ -118,7 +123,39 @@ namespace Pet
             Console.WriteLine(responseBody);
 
 
-            Assert.That((int)response.StatusCode, Is)
+            Assert.That((int)response.StatusCode, Is.EqualTo(200));
         }
+        [Test, Order(4)]
+        public void GetPetTest2()
+        {
+            int petId = 4303300;
+            String petName = "LeandrinhoPTK";
+            // Cria uma instância do cliente RestSharp.
+            var client = new RestClient(BASE_URL);
+
+            // Cria uma solicitação HTTP GET para o recurso "pet" com o ID desejado.
+            var request = new RestRequest($"pet/{petId}", Method.Get);
+
+            // Envia a solicitação para o servidor e recebe a resposta.
+            var response = client.Execute(request);
+
+            // Verifica se a solicitação foi bem-sucedida com base no código de status HTTP.
+            Assert.IsTrue(response.IsSuccessful);
+
+            // Desserializa o conteúdo da resposta JSON em um objeto C# dinâmico.
+            var responseBody = JsonConvert.DeserializeObject<dynamic>(response.Content);
+
+            Console.WriteLine(responseBody);
+
+            // Verifica se o código de status da resposta é igual a 200.
+            Assert.That((int)response.StatusCode, Is.EqualTo(200));
+            Assert.That((int)responseBody.id, Is.EqualTo(petId));
+            Assert.That(responseBody.name.ToString(), Is.EqualTo(petName));
+            
+
+            // Agora você pode realizar mais verificações com base nas informações do animal de estimação retornado.
+            // Por exemplo, você pode verificar o ID, o nome, o status, etc.
+        }
+        
     }
 }

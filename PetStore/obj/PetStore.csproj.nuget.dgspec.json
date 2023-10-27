@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\petstore\\PetStore.csproj": {}
+    "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\PetStore\\PetStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\petstore\\PetStore.csproj": {
+    "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\PetStore\\PetStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\petstore\\PetStore.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\PetStore\\PetStore.csproj",
         "projectName": "PetStore",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\petstore\\PetStore.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\PetStore\\PetStore.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\petstore\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\QA-Trilha\\Iterasys\\PetStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
