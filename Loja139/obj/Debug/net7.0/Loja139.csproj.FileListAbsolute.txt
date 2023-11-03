@@ -108,3 +108,4 @@ C:\Users\Usuario\Documents\QA-Trilha\Iterasys\Loja139\bin\Debug\net7.0\runtimes\
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\Loja139\bin\Debug\net7.0\AngleSharp.dll
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\Loja139\bin\Debug\net7.0\ICSharpCode.SharpZipLib.dll
 C:\Users\Usuario\Documents\QA-Trilha\Iterasys\Loja139\bin\Debug\net7.0\WebDriverManager.dll
+c:\Users\Usuario\Documents\QA-Trilha\Iterasys\Loja139\obj\Debug\net7.0\Loja139.sourcelink.json

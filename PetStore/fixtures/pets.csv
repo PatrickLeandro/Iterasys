@@ -1,0 +1,3 @@
+petId,categoryId,categoryName,petName,photoUrls,tagsIds,tagsNames,status
+430123,1,dog,Athena,,1;2,vacinado;castrado,available
+430124,2,cat,Garfgield,,1;3,vacinado;vermifugado,available
